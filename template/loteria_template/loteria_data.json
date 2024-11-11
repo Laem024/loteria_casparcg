@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Lotería Nacional Dominicana",
+        "cantidad_numeros": 3,
+        "rango_inicial": 0,
+        "rango_numeros": 100,
+        "tiempo_actualizacion": 5000,
+        "logo_url": "img/loteria_nacional_logo.png"
+    },
+    {
+        "nombre": "Lotería Quiniela y pale Leidsa",
+        "cantidad_numeros": 3,
+        "rango_inicial": 0,
+        "rango_numeros": 100,
+        "tiempo_actualizacion": 7000,
+        "logo_url": "img/loteria_leidsa_quinielapale_logo.png"
+    },
+    {
+        "nombre": "Lotería Loto Leidsa",
+        "cantidad_numeros": 6,
+        "rango_inicial": 1,
+        "rango_numeros": 41,
+        "tiempo_actualizacion": 10000,
+        "logo_url": "img/loteria_leidsa_loto_logo.png"
+    }
+]

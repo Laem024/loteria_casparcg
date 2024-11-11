@@ -1,0 +1,102 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e2a38;
+    color: #ecf0f1;
+    margin: 0;
+    overflow: hidden;
+}
+
+.loteria-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #27394d;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    height: 90vh;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    overflow-y: auto;
+}
+
+.loteria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3a4a63;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #ecf0f1;
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transición para la animación */
+}
+
+.animate-move {
+    opacity: 0;
+    transform: translateY(-20px); /* Desplazamiento hacia arriba */
+}
+
+.loteria-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 130px; /* Altura fija para asegurar uniformidad */
+    margin-bottom: 15px;
+}
+
+.loteria img.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+.loteria-header div {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Línea divisoria */
+.divider {
+    width: 80%;
+    height: 2px;
+    background-color: #ffffff;
+    opacity: 0.7;
+    margin: 12px 0;
+    border-radius: 1px;
+}
+
+.numeros {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.numeros span {
+    background-color: #ffffff;
+    color: #3a4a63;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-width: 40px;
+    transition: transform 0.2s ease;
+}
+
+/* Efecto hover en los números */
+.numeros span:hover {
+    transform: scale(1.1);
+}

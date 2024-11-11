@@ -1,26 +1,29 @@
 [
     {
         "nombre": "Lotería Nacional Dominicana",
+        "logo_url": "img/loteria_nacional_logo.png",
+        "rango_inicial": 1,
+        "rango_numeros": 99,
+        "tiempo_actualizacion": 50000,
         "cantidad_numeros": 3,
-        "rango_inicial": 0,
-        "rango_numeros": 100,
-        "tiempo_actualizacion": 5000,
-        "logo_url": "img/loteria_nacional_logo.png"
+        "color_limpiar": "#FFDDC1" 
     },
     {
-        "nombre": "Lotería Quiniela y pale Leidsa",
+        "nombre": "Quiniela y Pale Leidsa",
+        "logo_url": "img/loteria_leidsa_quinielapale_logo.png",
+        "rango_inicial": 1,
+        "rango_numeros": 99,
+        "tiempo_actualizacion": 60000,
         "cantidad_numeros": 3,
-        "rango_inicial": 0,
-        "rango_numeros": 100,
-        "tiempo_actualizacion": 7000,
-        "logo_url": "img/loteria_leidsa_quinielapale_logo.png"
+        "color_limpiar": "#D1FFC1" 
     },
     {
         "nombre": "Lotería Loto Leidsa",
-        "cantidad_numeros": 6,
+        "logo_url": "img/loteria_leidsa_loto_logo.png",
         "rango_inicial": 1,
         "rango_numeros": 41,
-        "tiempo_actualizacion": 10000,
-        "logo_url": "img/loteria_leidsa_loto_logo.png"
+        "tiempo_actualizacion": 80000,
+        "cantidad_numeros": 6,
+        "color_limpiar": "#C1D4FF" 
     }
 ]

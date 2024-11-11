@@ -29,17 +29,12 @@ body {
     align-items: center;
     background-color: #3a4a63;
     border-radius: 12px;
-    padding: 25px;
+    padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     color: #ecf0f1;
     text-align: center;
     box-sizing: border-box;
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Transición para la animación */
-}
-
-.animate-move {
-    opacity: 0;
-    transform: translateY(-20px); /* Desplazamiento hacia arriba */
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .loteria-header {
@@ -47,7 +42,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 130px; /* Altura fija para asegurar uniformidad */
+    height: 130px;
     margin-bottom: 15px;
 }
 
@@ -75,12 +70,14 @@ body {
     border-radius: 1px;
 }
 
+/* Contenedor de números con altura fija */
 .numeros {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
     width: 100%;
+    min-height: 120px; /* Altura fija para alinear las tarjetas */
 }
 
 .numeros span {
@@ -96,7 +93,86 @@ body {
     transition: transform 0.2s ease;
 }
 
-/* Efecto hover en los números */
 .numeros span:hover {
     transform: scale(1.1);
+}
+
+/* Contenedor de la sección inferior con altura mínima */
+.section-inferior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100px; /* Altura mínima para alinear todo lo que está debajo de la línea */
+    margin-top: auto;
+}
+
+.section-inferior .info-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.section-inferior .info-container .title {
+    font-size: 1em;
+    font-weight: bold;
+    color: #d1d8e0;
+    margin-bottom: 5px;
+}
+
+.section-inferior .info-container .value {
+    font-size: 0.9em;
+    color: #ffffff;
+}
+
+/* Espaciado adicional entre las secciones */
+.info-divider {
+    width: 80%;
+    height: 1px;
+    background-color: #ffffff;
+    opacity: 0.5;
+    margin: 10px 0;
+    border-radius: 1px;
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+    /* 0% { transform: translateY(0); }
+    50% { transform: translateY(-200px); } 
+    100% { transform: translateY(0); }  */
+
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-80px); } 
+    100% { transform: translateX(0); }
+}
+
+.bounce {
+    animation: bounce 0.25s ease-in-out; /* Duración de la animación de rebote */
+}
+
+/* Colocación de la tarjeta al extremo izquierdo */
+.left-position {
+    order: -1; /* Lleva la tarjeta al extremo izquierdo en el contenedor flex */
+    transform: translateX(-10px); /* Mover ligeramente a la izquierda */
+}
+
+/* Colocación de la tarjeta al extremo izquierdo durante la limpieza */
+.position-left {
+    position: absolute;
+    left: 0;
+    transform: translateX(-10px);
+}
+
+/* Animación de degradado para limpiar */
+.limpiar {
+    animation: limpiarDegradado 5s forwards;
+}
+
+@keyframes limpiarDegradado {
+    from {
+        background-color: #ffffff;
+    }
+    to {
+        background-color: var(--color-limpiar);
+    }
 }

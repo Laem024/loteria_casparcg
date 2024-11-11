@@ -1,0 +1,1 @@
+CG 1-10 ADD 1 "loteria_template" 1 "<data></data>"
